@@ -1,0 +1,110 @@
+Change Component DesignItemId : Designator=Q1 Old DesignItemId= New DesignItemId=BSN20
+Change Component DesignItemId : Designator=Q2 Old DesignItemId= New DesignItemId=BSN20
+Change Component DesignItemId : Designator=C13 Old DesignItemId= New DesignItemId=Cap Pol3
+Change Component DesignItemId : Designator=C22 Old DesignItemId= New DesignItemId=Cap Pol3
+Change Component DesignItemId : Designator=C15 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C16 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C25 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C29 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C30 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C31 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C33 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C34 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C35 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C37 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C38 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C39 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C41 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C43 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C44 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C46 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C47 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C49 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C50 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C53 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C54 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=C56 Old DesignItemId= New DesignItemId=Cap Semi
+Change Component DesignItemId : Designator=R8 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R9 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R17 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R20 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R21 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R22 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R25 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R26 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R30 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R31 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R32 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=R33 Old DesignItemId= New DesignItemId=RES1
+Change Component DesignItemId : Designator=TEST POINT 1 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 2 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 3 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 4 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 5 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 6 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 7 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 8 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 9 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 10 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 11 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 12 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 13 Old DesignItemId= New DesignItemId=TP-107
+Change Component DesignItemId : Designator=TEST POINT 14 Old DesignItemId= New DesignItemId=TP-107
+Change Component Description : Designator=C25 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C29 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C30 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C31 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C33 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C34 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C35 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C37 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C38 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C39 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C41 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C43 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C44 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C46 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C47 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C49 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C50 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C53 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C54 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C56 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Library : Designator=TEST POINT 1 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 2 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 3 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 4 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 5 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 6 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 7 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 8 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 9 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 10 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 11 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 12 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 13 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TEST POINT 14 Old Library= New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=C25 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C29 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C30 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C31 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C33 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C34 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C35 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C37 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C38 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C39 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C41 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C43 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C44 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C46 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C47 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C49 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C50 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C53 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C54 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C56 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=TP1 Old Library=alanb2.SCHLIB New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TP4 Old Library=alanb2.SCHLIB New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TP5 Old Library=alanb2.SCHLIB New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=TP12 Old Library=alanb2.SCHLIB New Library=FLS Data Formatter.SCHLIB

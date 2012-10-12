@@ -1,0 +1,22 @@
+Change Component Comment : Designator=C4 Old Comment=47uF New Comment=47 uF
+Change Component Comment : Designator=C11 Old Comment=47uF New Comment=47 uF
+Change Component Comment : Designator=C12 Old Comment=47uF New Comment=47 uF
+Change Component Comment : Designator=C1 Old Comment=100uF New Comment=100 uF
+Change Component Description : Designator=C15 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=C16 Old Description= New Description=Capacitor (Semiconductor SIM Model)
+Change Component Description : Designator=Q1 Old Description= New Description=N-channel Enhancement Mode FET
+Change Component Description : Designator=Q2 Old Description= New Description=N-channel Enhancement Mode FET
+Change Component Description : Designator=C13 Old Description= New Description=Polarized Capacitor (Surface Mount)
+Change Component Description : Designator=C22 Old Description= New Description=Polarized Capacitor (Surface Mount)
+Change Component Library : Designator=C13 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C15 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C16 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=C22 Old Library= New Library=Miscellaneous Devices.IntLib
+Change Component Library : Designator=Q1 Old Library= New Library=Philips Discrete MOSFET - Low Power.IntLib
+Change Component Library : Designator=Q2 Old Library= New Library=Philips Discrete MOSFET - Low Power.IntLib
+Change Component Library : Designator=J1 Old Library=alanb2.LIB New Library=alanb2rj45.LIB
+Change Component Library : Designator=U5 Old Library=alanb2.SCHLIB New Library=alanb2 6_21_2012.SCHLIB
+Change Component Library : Designator=U1 Old Library=alanb2.SCHLIB New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=U3 Old Library=alanb2.SCHLIB New Library=FLS Data Formatter.SCHLIB
+Change Component Library : Designator=U4 Old Library=alanb2.SCHLIB New Library=FLS Data Formatter.SCHLIB
+Change Class Name : Old Net Name=FLS data formatter 4_21_2012 New Net Name=M2FS FLS Data Formatter 8_14_2012

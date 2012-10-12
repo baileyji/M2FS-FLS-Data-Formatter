@@ -1,0 +1,5 @@
+Change Component Comment: Designator=TP8 Old Comment=IO3 New Comment=IO1
+Change Component Comment: Designator=TP11 Old Comment=IO3 New Comment=IO2
+Change Component Comment: Designator=TP10 Old Comment=IO3 New Comment=IO4
+Change Component Comment: Designator=TP9 Old Comment=IO3 New Comment=IO6
+Add Pin To Net: Pin=Test Point 2-1 Old Net=NetTest Point 2_1 New Net=2V5

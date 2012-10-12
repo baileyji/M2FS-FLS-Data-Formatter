@@ -1,0 +1,70 @@
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C1
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C2
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C3
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C4
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C5
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C6
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C7
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C8
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C9
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C10
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C11
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C12
+Removed Member From Class: ClassName=Power Supply Member=C26
+Removed Member From Class: ClassName=Power Supply Member=C31
+Removed Member From Class: ClassName=Power Supply Member=C43
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C59
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C60
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C61
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=J4
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=J5
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=logo1
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=logo2
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=logo3
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=logo4
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=R1
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=R2
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=R3
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=R4
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=R6
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=R7
+Removed Member From Class: ClassName=Power Supply Member=R8
+Removed Member From Class: ClassName=Power Supply Member=R10
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=TP10
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=U1
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=U4
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=U7
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component C13 100uF
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component C22 100uF
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component C35 0.1uF
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component C51 0.1uF
+Added Member To Class: ClassName=Power Supply Member=Component C59 10uF
+Added Member To Class: ClassName=Power Supply Member=Component C61 10uF
+Added Member To Class: ClassName=Power Supply Member=Component C62 10uF
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component L1 Inductor
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component L2 Inductor
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component Q1 BSN20
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component Q2 BSN20
+Added Member To Class: ClassName=Power Supply Member=Component R1 715K
+Added Member To Class: ClassName=Power Supply Member=Component R4 2.87K
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R13 100
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R14 100
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R15 100
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R17 100
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R19 100
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R20 100
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R23 100
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R24 100
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R25 10K
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R30 3K3
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R33 4K7
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component Test Point 5 CAM_FLD
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component Test Point 7 GND
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component Test Point 9 GND
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component Test Point 10 5V0
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component Test Point 11 CAM_PCLK
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component TP1 TP6
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component TP5 TP17
+Added Member To Class: ClassName=Power Supply Member=Component U1 TPS84410
+Added Member To Class: ClassName=Power Supply Member=Component U3 TPS84410
+Added Member To Class: ClassName=Power Supply Member=Component U6 LT1963AES8

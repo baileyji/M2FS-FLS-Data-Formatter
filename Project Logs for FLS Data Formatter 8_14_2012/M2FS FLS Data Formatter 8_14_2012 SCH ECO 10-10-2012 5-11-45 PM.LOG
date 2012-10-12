@@ -1,0 +1,4 @@
+Add Pin To Net: Pin=TP8-1 Old Net=NetTP8_1 New Net=IO1
+Add Pin To Net: Pin=TP9-1 Old Net=NetTP9_1 New Net=IO6
+Add Pin To Net: Pin=TP10-1 Old Net=NetTP10_1 New Net=IO4
+Add Pin To Net: Pin=TP11-1 Old Net=NetTP11_1 New Net=IO2

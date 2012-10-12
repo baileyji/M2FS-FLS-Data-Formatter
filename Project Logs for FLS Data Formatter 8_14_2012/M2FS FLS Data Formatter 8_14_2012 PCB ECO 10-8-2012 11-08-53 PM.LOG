@@ -1,0 +1,10 @@
+Change Component Comment : Designator=TP1 Old Comment=SIP6 New Comment=TP6
+Change Component Comment : Designator=TP12 Old Comment=SIP6 New Comment=TP6
+Change Component Comment : Designator=TP4 Old Comment=SIP17 New Comment=TP17
+Change Component Comment : Designator=TP5 Old Comment=SIP17 New Comment=TP17
+Change Component Description : Designator=J1 Old Description=A31470-ND CONN MOD JACK 4PORT 8-8 SHLD PCB New Description=
+Change Component Description : Designator=TP1 Old Description=Samtec TSW-150-07-G-S New Description=
+Change Component Description : Designator=TP12 Old Description=Samtec TSW-150-07-G-S New Description=
+Change Component Description : Designator=TP4 Old Description=Samtec TSW-150-07-G-S New Description=Test Point
+Change Component Description : Designator=TP5 Old Description=Samtec TSW-150-07-G-S New Description=Test Point
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R27 10

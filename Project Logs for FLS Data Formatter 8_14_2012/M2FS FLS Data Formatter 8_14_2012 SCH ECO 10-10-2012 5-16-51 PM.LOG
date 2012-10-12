@@ -1,0 +1,6 @@
+Add Pin To Net: Pin=TP1-1 Old Net=NetTP1_1 New Net=IO7
+Add Pin To Net: Pin=TP1-2 Old Net=NetTP1_2 New Net=IO9
+Add Pin To Net: Pin=TP1-3 Old Net=NetTP1_3 New Net=EOS_B
+Add Pin To Net: Pin=TP1-4 Old Net=NetTP1_4 New Net=PLL_LOCK_B
+Add Pin To Net: Pin=TP1-5 Old Net=NetTP1_5 New Net=PDWN
+Add Pin To Net: Pin=TP1-6 Old Net=NetTP1_6 New Net=DTP

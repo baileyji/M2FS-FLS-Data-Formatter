@@ -1,0 +1,28 @@
+Change Component Footprint: Designator=R17 Old Footprint=0402 slim New Footprint=0402 one-of
+Change Component Footprint: Designator=R25 Old Footprint=0402 slim New Footprint=0805
+Change Component Footprint: Designator=R26 Old Footprint=0402 slim New Footprint=0805
+Change Component Footprint: Designator=R27 Old Footprint=0402 slim New Footprint=0805
+Change Component Footprint: Designator=R31 Old Footprint=0402 slim New Footprint=0805
+Change Component Footprint: Designator=R32 Old Footprint=0402 slim New Footprint=0805
+Change Component Footprint: Designator=R33 Old Footprint=0402 slim New Footprint=0805
+Change Component Comment: Designator=R30 Old Comment=1K New Comment=3K3
+Change Component Comment: Designator=R32 Old Comment=1K New Comment=3K3
+Change Component Comment: Designator=R31 Old Comment=1K New Comment=4K7
+Change Component Comment: Designator=R33 Old Comment=1K New Comment=4K7
+Change Component Comment: Designator=R27 Old Comment=1K New Comment=10
+Change Component Comment: Designator=R8 Old Comment=1K New Comment=10K
+Change Component Comment: Designator=R9 Old Comment=1K New Comment=10K
+Change Component Comment: Designator=R25 Old Comment=1K New Comment=10K
+Change Component Comment: Designator=R26 Old Comment=1K New Comment=10K
+Change Component Comment: Designator=R13 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R14 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R15 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R16 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R17 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R18 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R19 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R20 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R21 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R22 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R23 Old Comment=1K New Comment=100
+Change Component Comment: Designator=R24 Old Comment=1K New Comment=100
