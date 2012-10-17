@@ -1,0 +1,4 @@
+Added Component: Designator=R34(0402 slim)
+Added Pin To Net: NetName=NRESET Pin=R34-1
+Added Pin To Net: NetName=1V8 Pin=R34-2
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component R34 10K

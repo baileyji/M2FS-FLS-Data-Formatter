@@ -1,0 +1,207 @@
+Protel Design System Design Rule Check
+PCB File : Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc
+Date     : 10/16/2012
+Time     : 11:39:00 PM
+
+WARNING: Zero hole size multi-layer pad(s) detected
+   Pad U2-K2(1362.724mil,1383.63mil)  Multi-Layer on Net CMOS_OE
+   Pad U2-V17(1953.276mil,1068.668mil)  Multi-Layer on Net V17
+   Pad U2-H5(1480.834mil,1462.37mil)  Multi-Layer on Net 2V5
+   Pad R17-1(1953.276mil,1304.888mil)  Multi-Layer on Net LVDS_CHANNEL_3_N
+
+WARNING: Multilayer Pads with 0 size Hole found
+   Pad U2-K2(1362.724mil,1383.63mil)  Multi-Layer
+   Pad U2-V17(1953.276mil,1068.668mil)  Multi-Layer
+   Pad U2-H5(1480.834mil,1462.37mil)  Multi-Layer
+   Pad R17-1(1953.276mil,1304.888mil)  Multi-Layer
+
+Processing Rule : Clearance Constraint (Gap=50mil) (IsStitchingVia and InNet('GND')),((IsVia and (Not IsStitchingVia)) Or IsPad)
+Rule Violations :0
+
+Processing Rule : Minimum Annular Ring (Minimum=5.6mil) (All)
+   Violation between Minimum Annular Ring (5mil < 5.6mil) : Pad U2-M18(1992.646mil,1304.888mil)  Multi-Layer
+   Violation between Minimum Annular Ring (5.499mil < 5.6mil) : Pad U2-L17(1953.276mil,1344.258mil)  Multi-Layer
+   Violation between Minimum Annular Ring (4mil < 5.6mil) : Via (1669mil,2206mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (4mil < 5.6mil) : Via (1792mil,2111mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (4mil < 5.6mil) : Via (1669mil,1983mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (4mil < 5.6mil) : Via (1595mil,1878mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (5mil < 5.6mil) : Via (1607mil,2212mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (5mil < 5.6mil) : Via (1638mil,2225mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (5mil < 5.6mil) : Via (1699mil,2226mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (5mil < 5.6mil) : Via (1731mil,2212mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (5mil < 5.6mil) : Via (1482mil,1790mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (5mil < 5.6mil) : Via (1678mil,1792mil) Top Layer to Bottom Layer
+   Violation between Minimum Annular Ring (5mil < 5.6mil) : Via (1720mil,1968mil) Top Layer to Bottom Layer
+Rule Violations :13
+
+Processing Rule : Length Constraint (Min=0mil) (Max=12000mil) (All)
+Rule Violations :0
+
+Processing Rule : Differential Pairs Uncoupled Length using the Gap Constraints (Min=8mil) (Max=10mil) (Preferred=10mil) ((InDifferentialPairClass('All Differential Pairs')))
+   Violation between Differential Pairs Routing Between Net START_B_P And Net START_B_N
+   Violation between Differential Pairs Routing Between Net START_A_P And Net START_A_N
+   Violation between Differential Pairs Routing Between Net FRAME_CLK_OUT_B_P And Net FRAME_CLK_OUT_B_N
+   Violation between Differential Pairs Routing Between Net DATA_CLK_OUT_B_P And Net DATA_CLK_OUT_B_N
+   Violation between Differential Pairs Routing Between Net DATA_CLK_OUT_A_P And Net DATA_CLK_OUT_A_N
+   Violation between Differential Pairs Routing Between Net SYS_CLK1_P And Net SYS_CLK1_N
+   Violation between Differential Pairs Routing Between Net SYS_CLK2_P And Net SYS_CLK2_N
+   Violation between Differential Pairs Routing Between Net LVDS_CHANNEL_1_P And Net LVDS_CHANNEL_1_N
+   Violation between Differential Pairs Routing Between Net LVDS_CHANNEL_2_P And Net LVDS_CHANNEL_2_N
+   Violation between Differential Pairs Routing Between Net LVDS_CHANNEL_3_P And Net LVDS_CHANNEL_3_N
+   Violation between Differential Pairs Routing Between Net LVDS_CHANNEL_4_P And Net LVDS_CHANNEL_4_N
+   Violation between Differential Pairs Routing Between Net LVDS_CHANNEL_5_P And Net LVDS_CHANNEL_5_N
+   Violation between Differential Pairs Routing Between Net LVDS_CHANNEL_6_P And Net LVDS_CHANNEL_6_N
+   Violation between Differential Pairs Routing Between Net LVDS_CHANNEL_7_P And Net LVDS_CHANNEL_7_N
+   Violation between Differential Pairs Routing Between Net LVDS_CHANNEL_8_P And Net LVDS_CHANNEL_8_N
+Rule Violations :15
+
+Processing Rule : Short-Circuit Constraint (Allowed=No) (All),(All)
+   Violation between Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer and 
+                     Pad U3-34(1663.15mil,2559.686mil)  Multi-Layer
+   Violation between Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer and 
+                     Pad U3-33(1627.716mil,2559.686mil)  Multi-Layer
+   Violation between Area Fill (1715.316mil,2547.878mil) (1752.716mil,2571.5mil)  Top Layer and 
+                     Pad U3-36(1734.016mil,2559.686mil)  Multi-Layer
+   Violation between Track (1362.724mil,1147.408mil)(1407.408mil,1147.408mil)  Mid-Layer 2 and 
+                     Pad U2-T2(1362.724mil,1147.408mil)  Multi-Layer
+   Violation between Track (1402.094mil,1052.906mil)(1402.094mil,1068.668mil)  Bottom Layer and 
+                     Pad U2-V3(1402.094mil,1068.668mil)  Multi-Layer
+   Violation between Track (1382mil,1088.762mil)(1402.094mil,1068.668mil)  Mid-Layer 1 and 
+                     Pad U2-V3(1402.094mil,1068.668mil)  Multi-Layer
+   Violation between Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer and 
+                     Track (1663.15mil,2559.686mil)(1663.15mil,2600.15mil)  Top Layer
+   Violation between Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer and 
+                     Track (1663.15mil,2512.15mil)(1663.15mil,2559.686mil)  Top Layer
+   Violation between Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer and 
+                     Track (1627.716mil,2559.686mil)(1663.15mil,2559.686mil)  Top Layer
+   Violation between Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer and 
+                     Track (1627.716mil,2559.686mil)(1663.15mil,2559.686mil)  Top Layer
+   Violation between Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer and 
+                     Track (1627.716mil,2559.686mil)(1627.716mil,2601.284mil)  Top Layer
+   Violation between Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer and 
+                     Track (1627.716mil,2509.284mil)(1627.716mil,2559.686mil)  Top Layer
+   Violation between Area Fill (1715.316mil,2547.878mil) (1752.716mil,2571.5mil)  Top Layer and 
+                     Track (1734.016mil,2559.686mil)(1734.016mil,2656.016mil)  Top Layer
+Rule Violations :13
+
+Processing Rule : Un-Routed Net Constraint ( (All) )
+   Violation between Un-Routed Net Constraint: Net 1V8 Between Track on layer Top Layer (1460,2115mil) And Pad R34-2 (1463,2176mil)
+   Violation between Un-Routed Net Constraint: Net 2V5_VCCA Between Track on layer Top Layer (1640,725mil) And Track on layer Bottom Layer (1640,725mil)
+   Violation between Un-Routed Net Constraint: Net AGND Between Track on layer Mid-Layer 2 (120,175mil) And Pad TEST POINT 14-1 (125,150mil)
+   Violation between Un-Routed Net Constraint: Net GND Between Track on layer Mid-Layer 1 (520,980mil) And Pad TEST POINT 12-1 (525,955mil)
+   Violation between Un-Routed Net Constraint: Net PDWN Between Track on layer Mid-Layer 1 (1402.094,1068.668mil) And Track on layer Bottom Layer (1402.094,1068.668mil)
+Rule Violations :5
+
+Processing Rule : Clearance Constraint (Gap=4mil) (All),(All)
+   Violation between Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer and 
+                     Pad U3-34(1663.15mil,2559.686mil)  Multi-Layer
+   Violation between Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer and 
+                     Pad U3-33(1627.716mil,2559.686mil)  Multi-Layer
+   Violation between Area Fill (1715.316mil,2547.878mil) (1752.716mil,2571.5mil)  Top Layer and 
+                     Pad U3-36(1734.016mil,2559.686mil)  Multi-Layer
+   Violation between Track (1362.724mil,1147.408mil)(1407.408mil,1147.408mil)  Mid-Layer 2 and 
+                     Pad U2-T2(1362.724mil,1147.408mil)  Multi-Layer
+   Violation between Track (1402.094mil,1052.906mil)(1402.094mil,1068.668mil)  Bottom Layer and 
+                     Pad U2-V3(1402.094mil,1068.668mil)  Multi-Layer
+   Violation between Track (1402.094mil,1052.906mil)(1420mil,1035mil)  Bottom Layer and 
+                     Pad U2-V3(1402.094mil,1068.668mil)  Multi-Layer
+   Violation between Track (1382mil,1088.762mil)(1402.094mil,1068.668mil)  Mid-Layer 1 and 
+                     Pad U2-V3(1402.094mil,1068.668mil)  Multi-Layer
+   Violation between Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer and 
+                     Track (1663.15mil,2559.686mil)(1663.15mil,2600.15mil)  Top Layer
+   Violation between Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer and 
+                     Track (1663.15mil,2512.15mil)(1663.15mil,2559.686mil)  Top Layer
+   Violation between Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer and 
+                     Track (1627.716mil,2559.686mil)(1663.15mil,2559.686mil)  Top Layer
+   Violation between Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer and 
+                     Track (1627.716mil,2559.686mil)(1663.15mil,2559.686mil)  Top Layer
+   Violation between Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer and 
+                     Track (1627.716mil,2559.686mil)(1627.716mil,2601.284mil)  Top Layer
+   Violation between Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer and 
+                     Track (1627.716mil,2509.284mil)(1627.716mil,2559.686mil)  Top Layer
+   Violation between Area Fill (1715.316mil,2547.878mil) (1752.716mil,2571.5mil)  Top Layer and 
+                     Track (1734.016mil,2559.686mil)(1734.016mil,2656.016mil)  Top Layer
+Rule Violations :14
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=5mil) (Conductor Width=10mil) (Air Gap=5mil) (Entries=4) (All)
+Rule Violations :0
+
+Processing Rule : Width Constraint (Min=6mil) (Max=50mil) (Preferred=50mil) (All)
+Rule Violations :0
+
+Processing Rule : Routing Layers(All)
+Rule Violations :0
+
+Processing Rule : Routing Via (MinHoleWidth=8mil) (MaxHoleWidth=40mil) (PreferredHoleWidth=8mil) (MinWidth=20mil) (MaxWidth=60mil) (PreferedWidth=20mil) (All)
+   Violation between Routing Via Style: Via (1669mil,2206mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1792mil,2111mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1669mil,1983mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1595mil,1878mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1607mil,2212mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1638mil,2225mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1699mil,2226mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1731mil,2212mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1482mil,1790mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1678mil,1792mil) Top Layer to Bottom Layer
+   Violation between Routing Via Style: Via (1720mil,1968mil) Top Layer to Bottom Layer
+Rule Violations :11
+
+Processing Rule : Pads and Vias to follow the Drill pairs settings
+Rule Violations :0
+
+Processing Rule : Hole Size Constraint (Min=1mil) (Max=250mil) (All)
+Rule Violations :0
+
+Processing Rule : Hole To Hole Clearance (Gap=6mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Minimum Solder Mask Sliver (Gap=0.1mil) (All),(All)
+Rule Violations :0
+
+Processing Rule : Silkscreen Over Component Pads (Clearance=1mil) (All),(All)
+   Violation between Track (1481mil,1240.314mil)(1481mil,1247.314mil)  Bottom Overlay and 
+                     Pad U2-P5(1480.834mil,1226.148mil)  Multi-Layer
+   Violation between Text "R8" (1466mil,2090mil)  Top Overlay and 
+                     Pad R9-1(1460mil,2115mil)  Multi-Layer
+   Violation between Text "U5" (1887.426mil,2031.408mil)  Top Overlay and 
+                     Pad C13-2(1891mil,2004mil)  Multi-Layer
+   Violation between Text "C33" (1598mil,1437.314mil)  Bottom Overlay and 
+                     Pad U2-H7(1559.574mil,1462.37mil)  Multi-Layer
+Rule Violations :4
+
+Processing Rule : Silk to Silk (Clearance=1mil) (All),(All)
+   Violation between Text "R8" (1466mil,2090mil)  Top Overlay and 
+                     Track (1480mil,2108mil)(1490mil,2108mil)  Top Overlay
+   Violation between Text "R9" (1466mil,2083mil)  Top Overlay and 
+                     Text "R8" (1466mil,2090mil)  Top Overlay
+Rule Violations :2
+
+Processing Rule : Net Antennae (Tolerance=0mil) (All)
+   Violation between Net Antennae: Track (1640mil,725mil)(1640mil,794.314mil)  Top Layer
+   Violation between Net Antennae: Track (1402.094mil,1052.906mil)(1402.094mil,1068.668mil)  Bottom Layer
+   Violation between Net Antennae: Track (1362.724mil,1147.408mil)(1407.408mil,1147.408mil)  Mid-Layer 2
+   Violation between Net Antennae: Track (120mil,175mil)(236mil,175mil)  Mid-Layer 2
+   Violation between Net Antennae: Track (520mil,915mil)(520mil,980mil)  Mid-Layer 4
+   Violation between Net Antennae: Track (1382mil,1088.762mil)(1402.094mil,1068.668mil)  Mid-Layer 1
+Rule Violations :6
+
+Processing Rule : Matched Net Lengths(Tolerance=500mil) (InNetClass('LVDS'))
+   Violation between Matched Net Lengths: Net FRAME_CLK_OUT_A_N
+   Violation between Matched Net Lengths: Net LVDS_CHANNEL_3_N
+   Violation between Matched Net Lengths: Net LVDS_CHANNEL_8_P
+   Violation between Matched Net Lengths: Net SYS_CLK1_N
+   Violation between Matched Net Lengths: Net SYS_CLK1_P
+Rule Violations :5
+
+Processing Rule : Width Constraint (Min=4mil) (Max=60mil) (Preferred=6mil) (All)
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=5mil) (Conductor Width=10mil) (Air Gap=5mil) (Entries=4) ((InNet('5V0') AND HasFootprint('CON34_.05X.05')))
+Rule Violations :0
+
+Processing Rule : Power Plane Connect Rule(Relief Connect )(Expansion=5mil) (Conductor Width=10mil) (Air Gap=5mil) (Entries=4) ((InNet('GND') AND InComponent('U2') AND HasFootprint('FBGA324')))
+Rule Violations :0
+
+
+Violations Detected : 88
+Time Elapsed        : 00:00:14

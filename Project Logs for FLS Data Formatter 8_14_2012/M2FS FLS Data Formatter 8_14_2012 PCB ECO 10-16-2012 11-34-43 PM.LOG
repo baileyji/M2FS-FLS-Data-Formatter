@@ -1,0 +1,7 @@
+Removed Pin From Net: NetName=1V8 Pin=U2-T2
+Removed Pin From Net: NetName=2V5 Pin=U2-T13
+Added Pin To Net: NetName=GND Pin=U2-A10
+Added Pin To Net: NetName=GND Pin=U2-E16
+Added Pin To Net: NetName=GND Pin=U2-T2
+Added Pin To Net: NetName=GND Pin=U2-T13
+Added Member To Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=Component TP6 IO5
