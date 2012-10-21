@@ -1,0 +1,12 @@
+Change Component Comment: Designator=J4 Old Comment=HFBR-2412 New Comment=AVAGO
+Change Component Comment: Designator=J5 Old Comment=HFBR-2412 New Comment=AVAGO
+Change Component Comment: Designator=logo1 Old Comment=starflake New Comment=logo
+Change Component Comment: Designator=logo2 Old Comment=starflake New Comment=logo
+Change Component Comment: Designator=logo3 Old Comment=starflake New Comment=logo
+Change Component Comment: Designator=logo4 Old Comment=starflake New Comment=logo
+Add Pin To Net: Pin=J4-2 Old Net=NetJ4_2 New Net=5V0
+Add Pin To Net: Pin=J4-3 Old Net=NetJ4_3 New Net=GND
+Add Pin To Net: Pin=J4-7 Old Net=NetJ4_7 New Net=GND
+Add Pin To Net: Pin=J5-2 Old Net=NetJ5_2 New Net=5V0
+Add Pin To Net: Pin=J5-3 Old Net=NetJ5_3 New Net=GND
+Add Pin To Net: Pin=J5-7 Old Net=NetJ5_7 New Net=GND

@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=1V8 Pin=U2-R10
+Removed Pin From Net: NetName=1V8 Pin=U2-R12
+Removed Pin From Net: NetName=1V8 Pin=U2-R14
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C57
+Removed Member From Class: ClassName=M2FS FLS Data Formatter 8_14_2012 Member=C58
+Added Pin To Net: NetName=2V5 Pin=U2-R10
+Added Pin To Net: NetName=2V5 Pin=U2-R12
+Added Pin To Net: NetName=2V5 Pin=U2-R14
