@@ -1,0 +1,10 @@
+DRC Rules Export File for PCB: Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc
+RuleKind=Clearance|RuleName=Clearance_1|Scope=Board|Minimum=4.00
+RuleKind=Clearance|RuleName=Stitching GND|Scope=Board|Minimum=50.00
+RuleKind=MinimumAnnularRing|RuleName=MinimumAnnularRing|Scope=Board|Minimum=3.00
+RuleKind=ShortCircuit|RuleName=ShortCircuit|Scope=Board|Allowed=0
+RuleKind=Clearance|RuleName=Clearance|Scope=Board|Minimum=3.50
+RuleKind=Width|RuleName=Width Power|Scope=Board|Minimum=6.00
+RuleKind=Width|RuleName=Width_All|Scope=Board|Minimum=3.50
+RuleKind=SolderMaskExpansion|RuleName=SolderMaskExpansion_1|Scope=Board|Minimum=4.00
+RuleKind=Width|RuleName=Differential Width|Scope=Board|Minimum=3.50

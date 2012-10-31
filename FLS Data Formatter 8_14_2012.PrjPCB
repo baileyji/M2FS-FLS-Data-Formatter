@@ -2,7 +2,7 @@
 Version=1.0
 HierarchyMode=0
 ChannelRoomNamingStyle=0
-OutputPath=
+OutputPath=Project Outputs for FLS Data Formatter 8_14_2012
 LogFolderPath=
 ReleasesFolder=
 ReleaseVaultGUID=
@@ -111,8 +111,120 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
+[Document6]
+DocumentPath=Job1.OutJob
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+
 [GeneratedDocument1]
 DocumentPath=Project Outputs for FLS Data Formatter 8_14_2012\Design Rule Check - M2FS FLS Data Formatter 8_14_2012.html
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=NC Drill\M2FS FLS Data Formatter 8_14_2012.DRR
+DItemRevisionGUID=
+
+[GeneratedDocument3]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.EXTREP
+DItemRevisionGUID=
+
+[GeneratedDocument4]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.G1
+DItemRevisionGUID=
+
+[GeneratedDocument5]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.G2
+DItemRevisionGUID=
+
+[GeneratedDocument6]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.G3
+DItemRevisionGUID=
+
+[GeneratedDocument7]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.G4
+DItemRevisionGUID=
+
+[GeneratedDocument8]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GBL
+DItemRevisionGUID=
+
+[GeneratedDocument9]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GBO
+DItemRevisionGUID=
+
+[GeneratedDocument10]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GBP
+DItemRevisionGUID=
+
+[GeneratedDocument11]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GBS
+DItemRevisionGUID=
+
+[GeneratedDocument12]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GP1
+DItemRevisionGUID=
+
+[GeneratedDocument13]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GP2
+DItemRevisionGUID=
+
+[GeneratedDocument14]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GTL
+DItemRevisionGUID=
+
+[GeneratedDocument15]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GTO
+DItemRevisionGUID=
+
+[GeneratedDocument16]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GTP
+DItemRevisionGUID=
+
+[GeneratedDocument17]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument18]
+DocumentPath=DiffReport\M2FS FLS Data Formatter 8_14_2012.html
+DItemRevisionGUID=
+
+[GeneratedDocument19]
+DocumentPath=DRC\M2FS FLS Data Formatter 8_14_2012.html
+DItemRevisionGUID=
+
+[GeneratedDocument20]
+DocumentPath=FootprintComparison\M2FS FLS Data Formatter 8_14_2012.html
+DItemRevisionGUID=
+
+[GeneratedDocument21]
+DocumentPath=NC Drill\M2FS FLS Data Formatter 8_14_2012.LDP
+DItemRevisionGUID=
+
+[GeneratedDocument22]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.REP
+DItemRevisionGUID=
+
+[GeneratedDocument23]
+DocumentPath=Gerber\M2FS FLS Data Formatter 8_14_2012.RUL
+DItemRevisionGUID=
+
+[GeneratedDocument24]
+DocumentPath=NC Drill\M2FS FLS Data Formatter 8_14_2012.TXT
+DItemRevisionGUID=
+
+[GeneratedDocument25]
+DocumentPath=Pick Place\Pick Place for M2FS FLS Data Formatter 8_14_2012.txt
 DItemRevisionGUID=
 
 [PCBConfiguration1]

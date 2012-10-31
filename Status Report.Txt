@@ -1,0 +1,10 @@
+Output: Footprint Comparison Report
+Type  : FootprintComparison
+From  : PCB Document [M2FS FLS Data Formatter 8_14_2012.PcbDoc]
+   Generated File[M2FS FLS Data Formatter 8_14_2012.html]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 2:32:25 PM On 10/31/2012
