@@ -1,0 +1,560 @@
+<html>
+<head>
+<META http-equiv="Content-Type" content="text/html">
+<style type="text/css">
+		h1, h2, h3, h4, h5, h6 {
+			font-family : sans-serif;
+			color : white;
+			background-color : #21489e;
+			padding: 0.3em;
+		}
+		body {
+			font-family : verdana;
+		}
+		td, th {
+			padding: 0.5em;
+			text-align : center;
+			width : 18%;
+		}
+		th {
+			background-color : #A6CAF0;
+
+		}
+		th.column1, td.column1 {
+			text-align: left;
+			width : auto;
+		}
+		table {
+			width : 100%;
+		}
+		
+		.DRC_summary_header {							
+			padding-bottom : 0.1em;
+			border : 0px solid black;							
+			width: 100%;
+                        align: right;
+                        
+		}
+
+		.DRC_summary_header_col1, 
+		.DRC_summary_header_col2, 
+		.DRC_summary_header_col3
+		{
+			color : black;
+			font-size:150%;
+                        padding : 0em;
+			padding-top : 0.2em;
+			padding-bottom 0.2: 0em;
+			border : 0px solid black;
+			width : auto;
+			vertical-align: top;
+			font-weight: bold;				
+		}
+		
+		.DRC_summary_header_col1 	
+		{		                       
+			text-align: right;
+                        width: auto;	
+		}
+
+		.DRC_summary_header_col2 	
+		{		
+			text-align: center;	
+		}
+
+		.DRC_summary_header_col3 	
+		{		
+			text-align: left;	
+		}
+
+
+		
+		.header_holder
+		{
+		Width = 100%;
+		border = 0px solid green;
+		padding = 0;
+		}
+		
+		
+		
+		.front_matter, .front_matter_column1, .front_matter_column2, .front_matter_column3
+                {
+			left:0;
+			top:0;
+			padding-top : 0.1em;			
+			border : 0px solid black;
+			width : 100%;
+			vertical-align: top
+
+		}
+		.front_matter {	
+			
+			margin-top: 5px;
+ 			margin-left: 0px;					 			
+ 			horizontal-align: left;
+		}
+				
+		
+		.front_matter_column1 {
+			width : 10em;	
+			text-align  : right;
+			padding-right:0.1em;
+			
+		}
+		
+		.front_matter_column2 {
+                        width: 0.1em;
+			align: center;
+			text-align : center;
+			margin-right  : 0.1em;	
+			margin-left   : 0.1em;
+		}
+		.front_matter_column3 {
+			width         : auto;  
+			text-align    : left;	
+			margin-right  : 0.5em;				
+		}
+		
+		.total_column1, .total_column {
+			font-weight : bold;
+		}
+		.total_column1 {
+			text-align : right;
+		}
+		.warning, .error {
+			color : red;
+			font-weight : bold;
+		}
+		tr.onmouseout_odd {
+			background-color : #EEEEE0 
+		}
+		tr.onmouseout_even { 
+			background-color : #F3F3E3   
+		}
+		tr.onmouseover_odd, tr.onmouseover_even { 
+			background-color : lightYellow
+		} 
+		a:link, a:visited, .q a:link,.q a:active,.q {
+			color: #21489e; 
+		}
+		a:link.callback, a:visited.callback { 
+			color: #008000 
+		}
+		a:link.customize, a:visited.customize {
+			color: #C0C0C0;
+			position: absolute; 
+			right: 10px;
+		}	
+		p.contents_level1 {
+			font-weight : bold;
+			font-size : 110%;
+			margin : 0.5em;
+		}
+		p.contents_level2 {
+			position : relative;
+			left : 20px;
+			margin : 0.5em;
+		}
+	</style><script type="text/javascript">
+		function coordToMils(coord) {
+			var number = coord / 10000;
+			
+			if (number != number.toFixed(3))
+				number = number.toFixed(3);
+
+			return number + 'mil'
+		}
+
+		function coordToMM(coord) {
+			var number = 0.0254 * coord / 10000;
+			
+			if (number != number.toFixed(4))
+				number = number.toFixed(4);
+			
+			return number + 'mm'
+		}
+	
+		function convertCoord(coordNode, units) {
+			for (var i = 0; i < coordNode.childNodes.length; i++) {
+				coordNode.removeChild(coordNode.childNodes[i]);
+			}
+
+			var coord = coordNode.getAttribute('value');
+			if (coord != null) {
+				if (units == 'mm') {
+					textNode = document.createTextNode(coordToMM(coord));
+					coordNode.appendChild(textNode);
+				} else if (units == 'mil') {
+					textNode = document.createTextNode(coordToMils(coord));		
+					coordNode.appendChild(textNode);	
+				}
+			}
+		}
+	
+		function convertUnits(unitNode, units) {
+			for (var i = 0; i < unitNode.childNodes.length; i++) {
+				unitNode.removeChild(unitNode.childNodes[i]);		
+			}
+		
+			textNode = document.createTextNode(units); 
+			unitNode.appendChild(textNode);
+		}
+	
+		function changeUnits(radio_input, units) {
+			if (radio_input.checked) {
+			
+				var elements = document.getElementsByName('coordinate');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertCoord(elements[i], units);
+					}
+				}
+	
+				var elements = document.getElementsByName('units');
+				if (elements) {
+					for (var i = 0; i < elements.length; i++) {
+						convertUnits(elements[i], units);
+					}
+				}
+			}
+		}
+	</script><title>Design Rule Verification Report</title>
+</head>
+<body onload=""><img ALT="Altium" src="
+			file://C:\Program Files (x86)\Altium\Users\Public\Documents\Altium\AD 10\Templates\AD-rgb_logo_223x64.gif
+		"><a href="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports" class="customize"><acronym title="dxpprocess://Client:SetupPreferences?Server=PCB|PageName=Reports">customize</acronym></a><h1>Design Rule Verification Report</h1>
+<table class="header_holder">
+<td Style="width:70%">
+<table class="front_matter">
+<tr class="front_matter">
+<td class="front_matter_column1">Date</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">2012-11-02</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">09:42:41</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Elapsed Time</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3">00:00:20</td>
+</tr>
+<tr class="front_matter">
+<td class="front_matter_column1">Filename</td>
+<td class="front_matter_column2">:</td>
+<td class="front_matter_column3"><a href="file:///C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc" class="file"><acronym title="C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc">C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc</acronym></a></td>
+</tr>
+</table>
+</td>
+<td Style="Width:30%">
+<table class="DRC_summary_header">
+<tr>
+<td class="DRC_summary_header_col1">Warnings</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">8</td></tr>
+<tr>
+<td class="DRC_summary_header_col1">Rule Violations</td>
+<td class="DRC_summary_header_col2">:</td>
+<td class="DRC_summary_header_col3" style="color : red">32</td></tr>
+</table>
+</td>
+</table>
+<hr><a name="IDASAEOD"><h2>Summary</h2></a><table>
+<tr>
+<th class="column1">Warnings</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAEBEOD">Zero hole size multi-layer pad(s) detected</a></td>
+<td class="column2">4</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDASCEOD">Multilayer Pads with 0 size Hole found</a></td>
+<td class="column2">4</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">8</td>
+</tr>
+</table><br><table>
+<tr>
+<th class="column1">Rule Violations</th>
+<th class="column2">Count</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAMDEOD">Clearance Constraint (Gap=4mil) (OnLayer('Top Layer') or OnLayer('BottomLayer')),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDASDEOD">Clearance Constraint (Gap=50mil) (IsStitchingVia and InNet('GND')),((IsVia and (Not IsStitchingVia)) Or IsPad)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAYDEOD">Minimum Annular Ring (Minimum=3mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA4DEOD">Length Constraint (Min=0mil) (Max=12000mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAEEEOD">Differential Pairs Uncoupled Length using the Gap Constraints (Min=3.5mil) (Max=10mil) (Preferred=3.5mil) ((InDifferentialPairClass('All Differential Pairs')))</a></td>
+<td class="column2">12</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDASGEOD">Short-Circuit Constraint (Allowed=No) (All),(All)</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAVZEOD">Un-Routed Net Constraint ( (All) )</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA1ZEOD">Clearance Constraint (Gap=3.5mil) (All),(All)</a></td>
+<td class="column2">10</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA12EOD">Power Plane Connect Rule(Relief Connect )(Expansion=5mil) (Conductor Width=10mil) (Air Gap=5mil) (Entries=4) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAB3EOD">Width Constraint (Min=6mil) (Max=50mil) (Preferred=50mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAH3EOD">Routing Layers(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAN3EOD">Routing Via (MinHoleWidth=8mil) (MaxHoleWidth=40mil) (PreferredHoleWidth=8mil) (MinWidth=20mil) (MaxWidth=60mil) (PreferedWidth=20mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAT3EOD">Pads and Vias to follow the Drill pairs settings</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAZ3EOD">Hole Size Constraint (Min=1mil) (Max=250mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA53EOD">Hole To Hole Clearance (Gap=6mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAF4EOD">Minimum Solder Mask Sliver (Gap=0.1mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAL4EOD">Silkscreen Over Component Pads (Clearance=1mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAR4EOD">Silk to Silk (Clearance=1mil) (All),(All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAX4EOD">Net Antennae (Tolerance=0mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDA34EOD">Matched Net Lengths(Tolerance=500mil) (InNetClass('LVDS'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAD5EOD">Width Constraint (Min=3.5mil) (Max=60mil) (Preferred=6mil) (All)</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAJ5EOD">Power Plane Connect Rule(Relief Connect )(Expansion=5mil) (Conductor Width=10mil) (Air Gap=5mil) (Entries=4) ((InNet('5V0') AND HasFootprint('CON34_.05X.05')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAP5EOD">Power Plane Connect Rule(Relief Connect )(Expansion=5mil) (Conductor Width=10mil) (Air Gap=5mil) (Entries=4) ((InNet('GND') AND InComponent('U2') AND HasFootprint('FBGA324')))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAV5EOD">Matched Net Lengths(Tolerance=10mil) (InNetClass('Match Lengths') or InDifferentialPairClass('Match Lengths'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDA15EOD">Matched Net Lengths(Tolerance=10mil) (InNetClass('Match Lengths 1'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="#IDAEIFOD">Width Constraint (Min=3.5mil) (Max=16.479mil) (Preferred=3.825mil) (InDifferentialPairClass('All Differential Pairs'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="#IDAKIFOD">Matched Net Lengths(Tolerance=10mil) (InNetClass('CAMLINES'))</a></td>
+<td class="column2">0</td>
+</tr>
+<tr>
+<td style="font-weight : bold; text-align : right" class="column1">Total</td>
+<td style="font-weight : bold" class="column2">32</td>
+</tr>
+</table><br><hr><a name="IDABBEOD"><h2>Warnings</h2></a><a name="IDAEBEOD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Zero hole size multi-layer pad(s) detected</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.276mil|Location2.X=2967.276mil|Location1.Y=2054.668mil|Location2.Y=2082.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.276mil|Location2.X=2967.276mil|Location1.Y=2054.668mil|Location2.Y=2082.668mil|Absolute=True">Pad U2-V17(1953.276mil,1068.668mil)  Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Net V17</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2466.834mil|Location2.X=2494.834mil|Location1.Y=2448.37mil|Location2.Y=2476.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2466.834mil|Location2.X=2494.834mil|Location1.Y=2448.37mil|Location2.Y=2476.37mil|Absolute=True">Pad U2-H5(1480.834mil,1462.37mil)  Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=0mil|Location2.X=0mil|Location1.Y=0mil|Location2.Y=0mil|Absolute=True">Net 2V5</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2931.709mil|Location2.X=2974.843mil|Location1.Y=2283.321mil|Location2.Y=2326.455mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2931.709mil|Location2.X=2974.843mil|Location1.Y=2283.321mil|Location2.Y=2326.455mil|Absolute=True">Pad R17-1(1953.276mil,1304.888mil)  Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2931.709mil|Location2.X=3654mil|Location1.Y=2226.964mil|Location2.Y=2578.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2931.709mil|Location2.X=3654mil|Location1.Y=2226.964mil|Location2.Y=2578.528mil|Absolute=True">Net LVDS_CHANNEL_3_N</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2821.166mil|Location2.X=2849.166mil|Location1.Y=2054.668mil|Location2.Y=2082.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2821.166mil|Location2.X=2849.166mil|Location1.Y=2054.668mil|Location2.Y=2082.668mil|Absolute=True">Pad U2-V14(1835.166mil,1068.668mil)  Multi-Layer</acronym></a> on <a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2821.166mil|Location2.X=3748.526mil|Location1.Y=2040.814mil|Location2.Y=3528.528mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2821.166mil|Location2.X=3748.526mil|Location1.Y=2040.814mil|Location2.Y=3528.528mil|Absolute=True">Net DATA_CLK_OUT_B_N</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDASCEOD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="warning">Multilayer Pads with 0 size Hole found</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.276mil|Location2.X=2967.276mil|Location1.Y=2054.668mil|Location2.Y=2082.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2939.276mil|Location2.X=2967.276mil|Location1.Y=2054.668mil|Location2.Y=2082.668mil|Absolute=True">Pad U2-V17(1953.276mil,1068.668mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2466.834mil|Location2.X=2494.834mil|Location1.Y=2448.37mil|Location2.Y=2476.37mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2466.834mil|Location2.X=2494.834mil|Location1.Y=2448.37mil|Location2.Y=2476.37mil|Absolute=True">Pad U2-H5(1480.834mil,1462.37mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2931.709mil|Location2.X=2974.843mil|Location1.Y=2283.321mil|Location2.Y=2326.455mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2931.709mil|Location2.X=2974.843mil|Location1.Y=2283.321mil|Location2.Y=2326.455mil|Absolute=True">Pad R17-1(1953.276mil,1304.888mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2821.166mil|Location2.X=2849.166mil|Location1.Y=2054.668mil|Location2.Y=2082.668mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2821.166mil|Location2.X=2849.166mil|Location1.Y=2054.668mil|Location2.Y=2082.668mil|Absolute=True">Pad U2-V14(1835.166mil,1068.668mil)  Multi-Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><hr><a name="IDAEEEOD"><table>
+<tr>
+<th style="text-align : left" colspan="1" class="rule">Differential Pairs Uncoupled Length using the Gap Constraints (Min=3.5mil) (Max=10mil) (Preferred=3.5mil) ((InDifferentialPairClass('All Differential Pairs')))</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2321.601mil|Location2.X=3716.751mil|Location1.Y=2499.987mil|Location2.Y=3811.698mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2321.601mil|Location2.X=3716.751mil|Location1.Y=2499.987mil|Location2.Y=3811.698mil|Absolute=True">Differential Pairs Routing Between Net START_B_P And Net START_B_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2321.601mil|Location2.X=3716.751mil|Location1.Y=2041.252mil|Location2.Y=2800.698mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2321.601mil|Location2.X=3716.751mil|Location1.Y=2041.252mil|Location2.Y=2800.698mil|Absolute=True">Differential Pairs Routing Between Net START_A_P And Net START_A_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2715.14mil|Location2.X=3653.921mil|Location1.Y=2044.261mil|Location2.Y=3446.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2715.14mil|Location2.X=3653.921mil|Location1.Y=2044.261mil|Location2.Y=3446.916mil|Absolute=True">Differential Pairs Routing Between Net FRAME_CLK_OUT_B_P And Net FRAME_CLK_OUT_B_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2777.243mil|Location2.X=3659.287mil|Location1.Y=1784.722mil|Location2.Y=2110.316mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2777.243mil|Location2.X=3659.287mil|Location1.Y=1784.722mil|Location2.Y=2110.316mil|Absolute=True">Differential Pairs Routing Between Net FRAME_CLK_OUT_A_P And Net FRAME_CLK_OUT_A_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.25mil|Location2.X=3716.914mil|Location1.Y=2066.752mil|Location2.Y=3546.916mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.25mil|Location2.X=3716.914mil|Location1.Y=2066.752mil|Location2.Y=3546.916mil|Absolute=True">Differential Pairs Routing Between Net DATA_CLK_OUT_B_P And Net DATA_CLK_OUT_B_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.998mil|Location2.X=3717.276mil|Location1.Y=1942.722mil|Location2.Y=2228.426mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.998mil|Location2.X=3717.276mil|Location1.Y=1942.722mil|Location2.Y=2228.426mil|Absolute=True">Differential Pairs Routing Between Net SYS_CLK1_P And Net SYS_CLK1_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.998mil|Location2.X=3717.276mil|Location1.Y=2656.942mil|Location2.Y=3647.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.998mil|Location2.X=3717.276mil|Location1.Y=2656.942mil|Location2.Y=3647.278mil|Absolute=True">Differential Pairs Routing Between Net SYS_CLK2_P And Net SYS_CLK2_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2790.997mil|Location2.X=3717.276mil|Location1.Y=2289.311mil|Location2.Y=2346.261mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2790.997mil|Location2.X=3717.276mil|Location1.Y=2289.311mil|Location2.Y=2346.261mil|Absolute=True">Differential Pairs Routing Between Net LVDS_CHANNEL_1_P And Net LVDS_CHANNEL_1_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.163mil|Location2.X=3717.001mil|Location1.Y=2318.997mil|Location2.Y=2447.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2833.163mil|Location2.X=3717.001mil|Location1.Y=2318.997mil|Location2.Y=2447.003mil|Absolute=True">Differential Pairs Routing Between Net LVDS_CHANNEL_2_P And Net LVDS_CHANNEL_2_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2915.643mil|Location2.X=3717.276mil|Location1.Y=2294.864mil|Location2.Y=2547.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2915.643mil|Location2.X=3717.276mil|Location1.Y=2294.864mil|Location2.Y=2547.003mil|Absolute=True">Differential Pairs Routing Between Net LVDS_CHANNEL_3_P And Net LVDS_CHANNEL_3_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.998mil|Location2.X=3717.276mil|Location1.Y=2302.61mil|Location2.Y=2647.003mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.998mil|Location2.X=3717.276mil|Location1.Y=2302.61mil|Location2.Y=2647.003mil|Absolute=True">Differential Pairs Routing Between Net LVDS_CHANNEL_4_P And Net LVDS_CHANNEL_4_N</acronym></a><br></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.998mil|Location2.X=3717.276mil|Location1.Y=2483.187mil|Location2.Y=3097.278mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2950.998mil|Location2.X=3717.276mil|Location1.Y=2483.187mil|Location2.Y=3097.278mil|Absolute=True">Differential Pairs Routing Between Net LVDS_CHANNEL_7_P And Net LVDS_CHANNEL_7_N</acronym></a><br></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDASGEOD"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Short-Circuit Constraint (Allowed=No) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2647.339mil|Location2.X=2678.961mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2647.339mil|Location2.X=2678.961mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True">Pad U3-34(1663.15mil,2559.686mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2611.905mil|Location2.X=2643.527mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2611.905mil|Location2.X=2643.527mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True">Pad U3-33(1627.716mil,2559.686mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2722.205mil|Location2.X=2745.827mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2722.205mil|Location2.X=2745.827mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1715.316mil,2547.878mil) (1752.716mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2718.205mil|Location2.X=2749.827mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2718.205mil|Location2.X=2749.827mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True">Pad U3-36(1734.016mil,2559.686mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2722.205mil|Location2.X=2745.827mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2722.205mil|Location2.X=2745.827mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1715.316mil,2547.878mil) (1752.716mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2729.016mil|Location2.X=2739.016mil|Location1.Y=3554.686mil|Location2.Y=3661.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2729.016mil|Location2.X=2739.016mil|Location1.Y=3554.686mil|Location2.Y=3661.016mil|Absolute=True">Track (1734.016mil,2559.686mil)(1734.016mil,2656.016mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.15mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3603.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.15mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3603.15mil|Absolute=True">Track (1663.15mil,2559.686mil)(1663.15mil,2600.15mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.15mil|Location2.X=2666.15mil|Location1.Y=3509.15mil|Location2.Y=3562.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.15mil|Location2.X=2666.15mil|Location1.Y=3509.15mil|Location2.Y=3562.686mil|Absolute=True">Track (1663.15mil,2512.15mil)(1663.15mil,2559.686mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2630.716mil|Location1.Y=3556.686mil|Location2.Y=3604.284mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2630.716mil|Location1.Y=3556.686mil|Location2.Y=3604.284mil|Absolute=True">Track (1627.716mil,2559.686mil)(1627.716mil,2601.284mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2630.716mil|Location1.Y=3506.284mil|Location2.Y=3562.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2630.716mil|Location1.Y=3506.284mil|Location2.Y=3562.686mil|Absolute=True">Track (1627.716mil,2509.284mil)(1627.716mil,2559.686mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3562.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3562.686mil|Absolute=True">Track (1627.716mil,2559.686mil)(1663.15mil,2559.686mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3562.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3562.686mil|Absolute=True">Track (1627.716mil,2559.686mil)(1663.15mil,2559.686mil)  Top Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br><a name="IDA1ZEOD"><table>
+<tr>
+<th style="text-align : left" colspan="2" class="rule">Clearance Constraint (Gap=3.5mil) (All),(All)</th>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2647.339mil|Location2.X=2678.961mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2647.339mil|Location2.X=2678.961mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True">Pad U3-34(1663.15mil,2559.686mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2611.905mil|Location2.X=2643.527mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2611.905mil|Location2.X=2643.527mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True">Pad U3-33(1627.716mil,2559.686mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2722.205mil|Location2.X=2745.827mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2722.205mil|Location2.X=2745.827mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1715.316mil,2547.878mil) (1752.716mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2718.205mil|Location2.X=2749.827mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2718.205mil|Location2.X=2749.827mil|Location1.Y=3536.985mil|Location2.Y=3582.387mil|Absolute=True">Pad U3-36(1734.016mil,2559.686mil)  Multi-Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2722.205mil|Location2.X=2745.827mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2722.205mil|Location2.X=2745.827mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1715.316mil,2547.878mil) (1752.716mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2729.016mil|Location2.X=2739.016mil|Location1.Y=3554.686mil|Location2.Y=3661.016mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2729.016mil|Location2.X=2739.016mil|Location1.Y=3554.686mil|Location2.Y=3661.016mil|Absolute=True">Track (1734.016mil,2559.686mil)(1734.016mil,2656.016mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.15mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3603.15mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.15mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3603.15mil|Absolute=True">Track (1663.15mil,2559.686mil)(1663.15mil,2600.15mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.15mil|Location2.X=2666.15mil|Location1.Y=3509.15mil|Location2.Y=3562.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2660.15mil|Location2.X=2666.15mil|Location1.Y=3509.15mil|Location2.Y=3562.686mil|Absolute=True">Track (1663.15mil,2512.15mil)(1663.15mil,2559.686mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2630.716mil|Location1.Y=3556.686mil|Location2.Y=3604.284mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2630.716mil|Location1.Y=3556.686mil|Location2.Y=3604.284mil|Absolute=True">Track (1627.716mil,2559.686mil)(1627.716mil,2601.284mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2630.716mil|Location1.Y=3506.284mil|Location2.Y=3562.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2630.716mil|Location1.Y=3506.284mil|Location2.Y=3562.686mil|Absolute=True">Track (1627.716mil,2509.284mil)(1627.716mil,2559.686mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_odd" onmouseover="className = 'onmouseover_odd'" onmouseout="className = 'onmouseout_odd'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2615.905mil|Location2.X=2639.527mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1609.016mil,2547.878mil) (1646.416mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3562.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3562.686mil|Absolute=True">Track (1627.716mil,2559.686mil)(1663.15mil,2559.686mil)  Top Layer</acronym></a></td>
+</tr>
+<tr class="onmouseout_even" onmouseover="className = 'onmouseover_even'" onmouseout="className = 'onmouseout_even'">
+<td style="width:50%; text-align:left" class="column1"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2651.339mil|Location2.X=2674.961mil|Location1.Y=3540.989mil|Location2.Y=3578.389mil|Absolute=True">Area Fill (1644.45mil,2547.878mil) (1681.85mil,2571.5mil)  Top Layer</acronym></a></td>
+<td style="width:50%; text-align:left" class="column2"><a href="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3562.686mil|Absolute=True" class="callback"><acronym title="dxpprocess://PCB:Zoom?document=C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc;viewname=PCBEditor;Action=AREA_DYNAMICZOOM|Location1.X=2624.716mil|Location2.X=2666.15mil|Location1.Y=3556.686mil|Location2.Y=3562.686mil|Absolute=True">Track (1627.716mil,2559.686mil)(1663.15mil,2559.686mil)  Top Layer</acronym></a></td>
+</tr>
+</table></a><a href="#top">Back to top</a><br><br></body>
+</html>

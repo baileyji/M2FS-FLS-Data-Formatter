@@ -1,0 +1,9 @@
+Change Component DesignItemId : Designator=R10 Old DesignItemId=RES1 New DesignItemId=ERJ6RK
+Change Component DesignItemId : Designator=R11 Old DesignItemId=RES1 New DesignItemId=ERJ6RK
+Change Component DesignItemId : Designator=R12 Old DesignItemId=RES1 New DesignItemId=ERJ6RK
+Change Component Footprint: Designator=R10 Old Footprint=0402 SLIM New Footprint=6-0805
+Change Component Footprint: Designator=R11 Old Footprint=0402 SLIM New Footprint=6-0805
+Change Component Footprint: Designator=R12 Old Footprint=0402 SLIM New Footprint=6-0805
+Change Component Comment : Designator=R10 Old Comment=1K New Comment=10K
+Change Component Comment : Designator=R11 Old Comment=1K New Comment=10K
+Change Component Comment : Designator=R12 Old Comment=1K New Comment=10K

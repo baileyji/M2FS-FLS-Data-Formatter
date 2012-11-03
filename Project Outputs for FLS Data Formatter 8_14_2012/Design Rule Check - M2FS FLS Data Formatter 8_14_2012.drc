@@ -1,19 +1,7 @@
 Protel Design System Design Rule Check
-PCB File : Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc
-Date     : 10/31/2012
-Time     : 1:37:53 PM
-
-WARNING: Zero hole size multi-layer pad(s) detected
-   Pad U2-V17(1953.276mil,1068.668mil)  Multi-Layer on Net V17
-   Pad U2-H5(1480.834mil,1462.37mil)  Multi-Layer on Net 2V5
-   Pad R17-1(1953.276mil,1304.888mil)  Multi-Layer on Net LVDS_CHANNEL_3_N
-   Pad U2-V14(1835.166mil,1068.668mil)  Multi-Layer on Net DATA_CLK_OUT_B_N
-
-WARNING: Multilayer Pads with 0 size Hole found
-   Pad U2-V17(1953.276mil,1068.668mil)  Multi-Layer
-   Pad U2-H5(1480.834mil,1462.37mil)  Multi-Layer
-   Pad R17-1(1953.276mil,1304.888mil)  Multi-Layer
-   Pad U2-V14(1835.166mil,1068.668mil)  Multi-Layer
+PCB File : C:\Users\alanb\Documents\GitHub\M2FS-FLS-Data-Formatter\M2FS FLS Data Formatter 8_14_2012.PcbDoc
+Date     : 2012-11-03
+Time     : 12:28:49
 
 Processing Rule : Clearance Constraint (Gap=4mil) (OnLayer('Top Layer') or OnLayer('BottomLayer')),(All)
 Rule Violations :0
@@ -110,7 +98,11 @@ Processing Rule : Hole Size Constraint (Min=1mil) (Max=250mil) (All)
 Rule Violations :0
 
 Processing Rule : Hole To Hole Clearance (Gap=6mil) (All),(All)
-Rule Violations :0
+   Violation between Pad U2-V14(1835.166mil,1068.668mil)  Multi-Layer and 
+                     Pad R23-1(1835.166mil,1057.314mil)  Multi-Layer
+   Violation between Pad R17-1(1953.276mil,1304.888mil)  Multi-Layer and 
+                     Pad U2-M17(1953.276mil,1304.888mil)  Multi-Layer
+Rule Violations :2
 
 Processing Rule : Minimum Solder Mask Sliver (Gap=0.1mil) (All),(All)
 Rule Violations :0
@@ -149,5 +141,5 @@ Processing Rule : Matched Net Lengths(Tolerance=10mil) (InNetClass('CAMLINES'))
 Rule Violations :0
 
 
-Violations Detected : 32
-Time Elapsed        : 00:00:14
+Violations Detected : 34
+Time Elapsed        : 00:00:21
