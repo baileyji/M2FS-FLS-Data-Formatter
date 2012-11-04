@@ -1,0 +1,2 @@
+Change Port Electrical: Port=DATA_CLK_OUT_A Old Type=Input New Type=I/O
+Change Port Electrical: Port=DATA_CLK_OUT_B Old Type=Input New Type=I/O

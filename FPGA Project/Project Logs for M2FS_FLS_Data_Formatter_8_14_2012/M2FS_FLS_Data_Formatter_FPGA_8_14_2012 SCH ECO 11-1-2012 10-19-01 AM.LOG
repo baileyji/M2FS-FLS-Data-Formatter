@@ -1,0 +1,6 @@
+Change Port Electrical: Port=FRAME_CLK_OUT_A Old Type=Input New Type=I/O
+Change Port Electrical: Port=FRAME_CLK_OUT_B Old Type=Input New Type=I/O
+Change Port Electrical: Port=START_A Old Type=Output New Type=I/O
+Change Port Electrical: Port=START_B Old Type=Output New Type=I/O
+Change Port Electrical: Port=SYS_CLK1 Old Type=Output New Type=I/O
+Change Port Electrical: Port=SYS_CLK2 Old Type=Output New Type=I/O

@@ -10,5 +10,8 @@
 ;...............................................................................
 Record=FileHeader | Id=DXP Constraints v1.0
 ;...............................................................................
+Record=Constraint | TargetKind=PCB | TargetId=FLS Data Formatter 8_14_2012.PrjPCB  
+;Record=Constraint | TargetKind=Port | TargetId=netname | FPGA_PINNUM=pinnum
+;Record=Constraint | TargetKind=Port | TargetId=VGA_R[1..0] | FPGA_PINNUM=P145,P141
 
 

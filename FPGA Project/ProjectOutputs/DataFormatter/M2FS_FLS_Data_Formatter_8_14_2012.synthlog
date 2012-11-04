@@ -1,0 +1,46 @@
+###############################################################################
+### Altium HDL Synthesizer 1.1.0.1
+### Copyright (C) 2005-2009, Altium Limited. All Rights Reserved
+###############################################################################
+### Timestamp: 11/1/2012 11:49:49 AM
+###############################################################################
+### Commandline: AltiumSynthesizer.exe "-o" "M2FS_FLS_Data_Formatter_8_14_2012.mof" "-p" "M2FS_FLS_Data_Formatter_8_14_2012.mpf"
+###
+### Options:
+###
+### Synthesizing M2FS_FLS_Data_Formatter_8_14_2012 for Cyclone3
+### Entity                  : M2FS_FLS_Data_Formatter_8_14_2012
+### VerilogMode             : 1 (0=Verilog95, 1=Verilog2001, 2=VerilogSystem, 3=Ams)
+### VHDL87                  : False
+### Insert Toplevel Buffers : True
+### Combinational Logic Opt : 3 (1=Low, 3=Normal, 5=High)
+###############################################################################
+### Compilation Report
+###############################################################################
+
+analyzing entity m2fs_fls_data_formatter_8_14_2012
+analyzing architecture structure
+###############################################################################
+### Elaboration Report
+###############################################################################
+
+executing M2FS_FLS_Data_Formatter_8_14_2012(structure)
+
+###############################################################################
+### Synthesis Report
+###############################################################################
+
+###############################################################################
+### Optimization Report
+###  command: mmHDLtoEDIF -f altera -n cyclone3 -p cyclone -z 3 -o "Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\ProjectOutputs\DataFormatter\M2FS_FLS_Data_Formatter_8_14_2012.edn" -b "Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\ProjectOutputs\DataFormatter\M2FS_FLS_Data_Formatter_8_14_2012.bfl" -e M2FS_FLS_Data_Formatter_8_14_2012 -L "C:\Users\Public\Documents\Altium\AD\Library/" 
+
+INFO LibDir:  "C:\Users\Public\Documents\Altium\AD\Library/"
+
+INFO ConstraintsMap:  "C:\Users\Public\Documents\Altium\AD\Library/vhdl_lib/VendorConstraints.map"
+
+##E||| empty design file
+
+
+###############################################################################
+Synthesis failed.
+###############################################################################

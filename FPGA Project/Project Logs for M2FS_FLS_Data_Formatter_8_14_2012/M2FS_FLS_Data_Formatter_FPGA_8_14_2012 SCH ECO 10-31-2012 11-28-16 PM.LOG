@@ -1,0 +1,8 @@
+Change Port Electrical: Port=LVDS_CHANNEL_1 Old Type=Input New Type=I/O
+Change Port Electrical: Port=LVDS_CHANNEL_2 Old Type=Input New Type=I/O
+Change Port Electrical: Port=LVDS_CHANNEL_3 Old Type=Input New Type=I/O
+Change Port Electrical: Port=LVDS_CHANNEL_4 Old Type=Input New Type=I/O
+Change Port Electrical: Port=LVDS_CHANNEL_5 Old Type=Input New Type=I/O
+Change Port Electrical: Port=LVDS_CHANNEL_6 Old Type=Input New Type=I/O
+Change Port Electrical: Port=LVDS_CHANNEL_7 Old Type=Input New Type=I/O
+Change Port Electrical: Port=LVDS_CHANNEL_8 Old Type=Input New Type=I/O

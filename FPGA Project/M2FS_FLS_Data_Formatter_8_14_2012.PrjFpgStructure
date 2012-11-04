@@ -1,2 +1,2 @@
 Record=TopLevelDocument|FileName=M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc
-Record=Configuration|Name=Default - All Constraints|DeviceName= 
+Record=Configuration|Name=DataFormatter|DeviceName=EP3C40F324C8N

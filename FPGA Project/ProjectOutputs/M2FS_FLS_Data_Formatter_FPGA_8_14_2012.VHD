@@ -1,6 +1,6 @@
 ------------------------------------------------------------
 -- VHDL M2FS_FLS_Data_Formatter_FPGA_8_14_2012
--- 2012 10 19 13 56 2
+-- 2012 11 1 13 22 54
 -- Created By "DXP VHDL Generator"
 -- "Copyright (c) 2002-2004 Altium Limited"
 ------------------------------------------------------------
@@ -13,6 +13,71 @@ Library IEEE;
 Use     IEEE.std_logic_1164.all;
 
 Entity M2FS_FLS_Data_Formatter_FPGA_8_14_2012 Is
+  port
+  (
+    CAM_CLKA           : In    STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_CLKA
+    CAM_D0             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D0
+    CAM_D1             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D1
+    CAM_D2             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D2
+    CAM_D3             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D3
+    CAM_D4             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D4
+    CAM_D5             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D5
+    CAM_D6             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D6
+    CAM_D7             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D7
+    CAM_D8             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D8
+    CAM_D9             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D9
+    CAM_D10            : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D10
+    CAM_D11            : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_D11
+    CAM_FLD            : In    STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_FLD
+    CAM_HS             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_HS
+    CAM_PCLK           : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_PCLK
+    CAM_VS             : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CAM_VS
+    CMOS_OE            : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=CMOS_OE
+    DATA_CLK_OUT_A     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=DATA_CLK_OUT_A
+    DATA_CLK_OUT_B     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=DATA_CLK_OUT_B
+    DTP                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=DTP
+    EOS_A              : In    STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=EOS_A
+    EOS_B              : In    STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=EOS_B
+    FPGA_SCHEMATIC_GND : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=FPGA_SCHEMATIC_GND
+    FRAME_CLK_OUT_A    : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=FRAME_CLK_OUT_A
+    FRAME_CLK_OUT_B    : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=FRAME_CLK_OUT_B
+    GND                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=GND
+    HSYNC              : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=HSYNC
+    IO1                : In    STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO1
+    IO2                : In    STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO2
+    IO3                : In    STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO3
+    IO4                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO4
+    IO5                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO5
+    IO6                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO6
+    IO7                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO7
+    IO8                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO8
+    IO9                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO9
+    IO10               : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO10
+    IO11               : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO11
+    IO12               : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO12
+    IO13               : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO13
+    IO14               : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO14
+    IO15               : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO15
+    IO16               : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=IO16
+    LVDS_CHANNEL_1     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=LVDS_CHANNEL_1
+    LVDS_CHANNEL_2     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=LVDS_CHANNEL_2
+    LVDS_CHANNEL_3     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=LVDS_CHANNEL_3
+    LVDS_CHANNEL_4     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=LVDS_CHANNEL_4
+    LVDS_CHANNEL_5     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=LVDS_CHANNEL_5
+    LVDS_CHANNEL_6     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=LVDS_CHANNEL_6
+    LVDS_CHANNEL_7     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=LVDS_CHANNEL_7
+    LVDS_CHANNEL_8     : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=LVDS_CHANNEL_8
+    PDWN               : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=PDWN
+    PLL_LOCK_A         : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=PLL_LOCK_A
+    PLL_LOCK_B         : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=PLL_LOCK_B
+    START_A            : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=START_A
+    START_B            : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=START_B
+    SYS_CLK1           : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=SYS_CLK1
+    SYS_CLK2           : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=SYS_CLK2
+    T18                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=T18
+    V17                : InOut STD_LOGIC;                    -- ObjectKind=Port|PrimaryId=V17
+    VSYNC              : InOut STD_LOGIC                     -- ObjectKind=Port|PrimaryId=VSYNC
+  );
   attribute MacroCell : boolean;
 
 End M2FS_FLS_Data_Formatter_FPGA_8_14_2012;

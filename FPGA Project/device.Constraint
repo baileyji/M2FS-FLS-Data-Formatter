@@ -10,5 +10,78 @@
 ;...............................................................................
 Record=FileHeader | Id=DXP Constraints v1.0
 ;...............................................................................
+Record=Constraint | TargetKind=Part | TargetId=EP3C40F324C8N
 
+Record=Constraint | TargetKind=Port | TargetId=CAM_D0 | FPGA_PINNUM=A17 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D1 | FPGA_PINNUM=A16 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D2 | FPGA_PINNUM=A15 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D3 | FPGA_PINNUM=C14 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D4 | FPGA_PINNUM=A14 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D5 | FPGA_PINNUM=D14 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D6 | FPGA_PINNUM=E14 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D7 | FPGA_PINNUM=A12 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D8 | FPGA_PINNUM=D12 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D9 | FPGA_PINNUM=E13 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D10 | FPGA_PINNUM=E12 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_D11 | FPGA_PINNUM=C9 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_FLD | FPGA_PINNUM=A9 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_HS | FPGA_PINNUM=E8 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_PCLK | FPGA_PINNUM=A18 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_VS | FPGA_PINNUM=D7 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CMOS_OE | FPGA_PINNUM=U1 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=DTP | FPGA_PINNUM=H1
+Record=Constraint | TargetKind=Port | TargetId=IO1 | FPGA_PINNUM=N1 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO2 | FPGA_PINNUM=V9 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO3 | FPGA_PINNUM=B9 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO4 | FPGA_PINNUM=A4 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO5 | FPGA_PINNUM=E7 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO6 | FPGA_PINNUM=B6 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO7 | FPGA_PINNUM=U3 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO8 | FPGA_PINNUM=B8 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO9 | FPGA_PINNUM=B12 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO10 | FPGA_PINNUM=B14 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO11 | FPGA_PINNUM=A8 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO12 | FPGA_PINNUM=E6 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO13 | FPGA_PINNUM=V4 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO14 | FPGA_PINNUM=B4 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO15 | FPGA_PINNUM=E9 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=IO16 | FPGA_PINNUM=P6 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=PDWN | FPGA_PINNUM=C2
+Record=Constraint | TargetKind=Port | TargetId=V17 | FPGA_PINNUM=V17
+Record=Constraint | TargetKind=Port | TargetId=CAM_CLKA | FPGA_PINNUM=N2 | FPGA_IOSTANDARD=LVCMOS18
+Record=Constraint | TargetKind=Port | TargetId=CAM_FLD_OUT | FPGA_PINNUM=E10
+Record=Constraint | TargetKind=Port | TargetId=DATA_READY | FPGA_PINNUM=H16
+Record=Constraint | TargetKind=Port | TargetId=HS | FPGA_PINNUM=A7
+Record=Constraint | TargetKind=Port | TargetId=HSYNC | FPGA_PINNUM=A5 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=PLL_LOCK_A | FPGA_PINNUM=D2
+Record=Constraint | TargetKind=Port | TargetId=PLL_LOCK_B | FPGA_PINNUM=N15
+Record=Constraint | TargetKind=Port | TargetId=T18 | FPGA_PINNUM=T18
+Record=Constraint | TargetKind=Port | TargetId=VS | FPGA_PINNUM=A3
+Record=Constraint | TargetKind=Port | TargetId=VSYNC | FPGA_PINNUM=A1 | FPGA_IOSTANDARD=LVTTL18
+Record=Constraint | TargetKind=Port | TargetId=DATA_CLK_OUTA | FPGA_PINNUM=U8
+Record=Constraint | TargetKind=Port | TargetId=DATA_CLK_OUTB | FPGA_PINNUM=V8
+Record=Constraint | TargetKind=Port | TargetId=FRAME_CLK_OUTA | FPGA_PINNUM=V7
+Record=Constraint | TargetKind=Port | TargetId=FRAME_CLK_OUTB | FPGA_PINNUM=U7
+Record=Constraint | TargetKind=Port | TargetId=LVDS_CHANNEL_1 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=L13
+Record=Constraint | TargetKind=Port | TargetId=LVDS_CHANNEL_2 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=L14
+Record=Constraint | TargetKind=Port | TargetId=LVDS_CHANNEL_3 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=L16
+Record=Constraint | TargetKind=Port | TargetId=LVDS_CHANNEL_4 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=L17
+Record=Constraint | TargetKind=Port | TargetId=LVDS_CHANNEL_5 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=K17
+Record=Constraint | TargetKind=Port | TargetId=LVDS_CHANNEL_6 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=H13
+Record=Constraint | TargetKind=Port | TargetId=LVDS_CHANNEL_7 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=G17
+Record=Constraint | TargetKind=Port | TargetId=LVDS_CHANNEL_8 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=D17
+Record=Constraint | TargetKind=Port | TargetId=EOS_A | FPGA_PINNUM=F18
+Record=Constraint | TargetKind=Port | TargetId=EOS_B | FPGA_PINNUM=F17
+Record=Constraint | TargetKind=Port | TargetId=DATA_CLK_OUT_A | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=P10
+Record=Constraint | TargetKind=Port | TargetId=DATA_CLK_OUT_B | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=U14
+Record=Constraint | TargetKind=Port | TargetId=FRAME_CLK_OUT_A | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=U13
+Record=Constraint | TargetKind=Port | TargetId=FRAME_CLK_OUT_B | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=U11
+Record=Constraint | TargetKind=Port | TargetId=START_A | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=B2
+Record=Constraint | TargetKind=Port | TargetId=START_B | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=G2
+Record=Constraint | TargetKind=Port | TargetId=SYS_CLK1 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=P17
+Record=Constraint | TargetKind=Port | TargetId=SYS_CLK2 | FPGA_IOSTANDARD=LVDS | FPGA_PINNUM=C17
+;
+;
+Record=Constraint | TargetKind=Port | TargetId=GND | FPGA_PINNUM=F3,H3,H6,L6,R1,T2,T1
+;Record=Constraint | TargetKind=Port | TargetId=GND | FPGA_PINNUM=R5,U2,V2,T6,P8,V12,T11,U16,T13,T14,P13,U18,V18,T16,R16,R18,R17,N16,L18,J13,H18,H15,B17,C12,E11,A2
 

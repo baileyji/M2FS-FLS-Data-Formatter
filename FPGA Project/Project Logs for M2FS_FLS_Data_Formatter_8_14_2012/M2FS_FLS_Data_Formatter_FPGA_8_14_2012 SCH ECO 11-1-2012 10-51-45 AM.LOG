@@ -1,0 +1,15 @@
+Change Port Electrical: Port=cam_d0 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d1 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d2 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d3 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d4 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d5 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d6 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d7 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d8 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d9 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d10 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_d11 Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_hs Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_pclk Old Type=Output New Type=I/O
+Change Port Electrical: Port=cam_vs Old Type=Output New Type=I/O

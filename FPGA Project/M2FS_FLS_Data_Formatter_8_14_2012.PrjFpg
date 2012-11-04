@@ -81,12 +81,70 @@ ClassGenNCAutoScope=None
 DItemRevisionGUID=
 GenerateClassCluster=0
 
+[Document4]
+DocumentPath=PCB Constraints.Constraint
+AnnotationEnabled=1
+AnnotateStartValue=1
+AnnotationIndexControlEnabled=0
+AnnotateSuffix=
+AnnotateScope=All
+AnnotateOrder=-1
+DoLibraryUpdate=1
+DoDatabaseUpdate=1
+ClassGenCCAutoEnabled=1
+ClassGenCCAutoRoomEnabled=1
+ClassGenNCAutoScope=None
+DItemRevisionGUID=
+GenerateClassCluster=0
+
+[GeneratedDocument1]
+DocumentPath=ProjectOutputs\DataFormatter\M2FS_FLS_Data_Formatter_8_14_2012.synthlog
+DItemRevisionGUID=
+
+[GeneratedDocument2]
+DocumentPath=ProjectOutputs\DataFormatter\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.VHD
+DItemRevisionGUID=
+
+[Configuration1]
+Name=DataFormatter
+ParameterCount=0
+ConstraintFileCount=2
+ConstraintFilePath1=device.Constraint
+ConstraintFilePath2=pcb.Constraint
+
+[Configuration2]
+Name=PCB Configuration
+ParameterCount=0
+ConstraintFileCount=1
+ConstraintFilePath1=PCB Constraints.Constraint
+
 [PCBConfiguration1]
 ReleaseItemId=
 CurrentRevision=
 Name=Default Configuration
 Variant=[No Variations]
 GenerateBOM=0
+
+[Generic_VHDLSynthesis]
+SchematicNetlister=0
+
+[Generic_FPGAToPCBWizard]
+ProjectFileName=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\PCB Project1.PrjPCB
+SheetFileName=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\FPGA_U1_Auto.SchDoc
+SymbolFileName=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\FPGA_U1_Manual.SchDoc
+Designator=U1
+UnusedInput=Add No ERC directive
+UnusedVREF=Add No ERC directive
+UnusedSpecial=Tie to individual ports
+UnusedIO=Add No ERC directive
+UseStandard=-1
+UseMetric=-1
+AssignPorts=-1
+UsePowerPorts=-1
+UseVREFPowerPorts=-1
+CreateSymbol=-1
+UniqueID=CMHBDPFJ
+Configuration=PCB Configuration
 
 [OutputGroup1]
 Name=Netlist Outputs
@@ -203,6 +261,8 @@ OutputName22=VHDL File
 OutputDocumentPath22=
 OutputVariantName22=
 OutputDefault22=0
+Configuration22_Name1=OutputConfigurationParameter1
+Configuration22_Item1=Crossprobe=False|EnableAttributes=True|Record=VHDLView|SingleFile=True
 OutputType23=WireListNetlist
 OutputName23=WireList Netlist
 OutputDocumentPath23=
@@ -912,6 +972,128 @@ UpdateCurrentModels=1
 SelectedOnly=0
 PartTypes=0
 
+[ToDoManager]
+ProjectToDo1=Name=Add port CAM_CLKA|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=AWTSJXRY
+ProjectToDo2=Name=Add port CAM_D0|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=CECSVHLB
+ProjectToDo3=Name=Add port CAM_D1|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=THTUNKSE
+ProjectToDo4=Name=Add port CAM_D10|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=YHQGFTWE
+ProjectToDo5=Name=Add port CAM_D11|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=GBQERSJK
+ProjectToDo6=Name=Add port CAM_D2|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=JLKNXMXQ
+ProjectToDo7=Name=Add port CAM_D3|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=CXJHBHUX
+ProjectToDo8=Name=Add port CAM_D4|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=NHOSRVXH
+ProjectToDo9=Name=Add port CAM_D5|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=EYBNEGIE
+ProjectToDo10=Name=Add port CAM_D6|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=KKMPUYPN
+ProjectToDo11=Name=Add port CAM_D7|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=TXXUIMGI
+ProjectToDo12=Name=Add port CAM_D8|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=ISMLLUFY
+ProjectToDo13=Name=Add port CAM_D9|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=EJHJCVQH
+ProjectToDo14=Name=Add port CAM_FLD|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=DMBLHMIY
+ProjectToDo15=Name=Add port CAM_FLD_OUT|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=CUJFOLOA
+ProjectToDo16=Name=Add port CAM_HS|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=XOMTUGWP
+ProjectToDo17=Name=Add port CAM_PCLK|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=BAKDXPVM
+ProjectToDo18=Name=Add port CAM_VS|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=IPCVTWAE
+ProjectToDo19=Name=Add port CMOS_OE|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=VBLBXHXF
+ProjectToDo20=Name=Add port DATA_CLK_OUTA|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=XFWKSUBW
+ProjectToDo21=Name=Add port DATA_CLK_OUTB|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=YPJAFEYA
+ProjectToDo22=Name=Add port DATA_READY|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=SDUYIHMN
+ProjectToDo23=Name=Add port DTP|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=CCRRVVUR
+ProjectToDo24=Name=Add port EOS_A|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=QMJMVNWI
+ProjectToDo25=Name=Add port EOS_B|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=LVSDRBRR
+ProjectToDo26=Name=Add port EOSA|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=VXUFPASL
+ProjectToDo27=Name=Add port EOSB|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=JIJKVSKV
+ProjectToDo28=Name=Add port FRAME_CLK_OUTA|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=JTVIKONS
+ProjectToDo29=Name=Add port FRAME_CLK_OUTB|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=MHYJEJCA
+ProjectToDo30=Name=Add port GND|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=GGULXOQK
+ProjectToDo31=Name=Add port HS|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=NAMHPDHR
+ProjectToDo32=Name=Add port GND|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=HSKPHFFU
+ProjectToDo33=Name=Add port IO_14|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=JMFLRYTX
+ProjectToDo34=Name=Add port IO_13|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=HUVSIQEA
+ProjectToDo35=Name=Add port IO_12|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=VNWDYYOS
+ProjectToDo36=Name=Add port IO_11|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=MPOKCDCM
+ProjectToDo37=Name=Add port IO_10|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=WYKXKLWA
+ProjectToDo38=Name=Add port HSYNC|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=EVINIFGX
+ProjectToDo39=Name=Add Differential port SYS_CLK2|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=BACSVAYB
+ProjectToDo40=Name=Add Differential port SYS_CLK1|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=XCACXAKS
+ProjectToDo41=Name=Add Differential port START_B|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=CFGENACK
+ProjectToDo42=Name=Add Differential port START_A|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=DYSQGIWV
+ProjectToDo43=Name=Add Differential port LVDS_CHANNEL_8|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=ETLOJMOJ
+ProjectToDo44=Name=Add Differential port LVDS_CHANNEL_7|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=LHQHQVJM
+ProjectToDo45=Name=Add Differential port LVDS_CHANNEL_6|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=MPFKMPOW
+ProjectToDo46=Name=Add Differential port LVDS_CHANNEL_5|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=EGXDWIAQ
+ProjectToDo47=Name=Add Differential port LVDS_CHANNEL_4|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=QVCBSOCA
+ProjectToDo48=Name=Add Differential port LVDS_CHANNEL_3|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=SSSCRUGY
+ProjectToDo49=Name=Add Differential port LVDS_CHANNEL_2|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=BONQWYYS
+ProjectToDo50=Name=Add Differential port LVDS_CHANNEL_1|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=FHBLWTSF
+ProjectToDo51=Name=Add Differential port FRAME_CLK_OUT_B|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=JJWKIYSS
+ProjectToDo52=Name=Add Differential port FRAME_CLK_OUT_A|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=MNTTEHHG
+ProjectToDo53=Name=Add Differential port DATA_CLK_OUT_B|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=AJFSJKOV
+ProjectToDo54=Name=Add Differential port DATA_CLK_OUT_A|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=CCMJJJXM
+ProjectToDo55=Name=Add port VSYNC|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=NLKQSDFA
+ProjectToDo56=Name=Add port VS|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=FBNBVWTQ
+ProjectToDo57=Name=Add port V17|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=BIYLVAAS
+ProjectToDo58=Name=Add port T18|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=NBVXCATN
+ProjectToDo59=Name=Add port PLL_LOCK_B|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=TACONGSV
+ProjectToDo60=Name=Add port PLL_LOCK_A|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=IIAXCIYN
+ProjectToDo61=Name=Add port PDWN|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=HQJFFNNJ
+ProjectToDo62=Name=Add port IO9|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=DCCPPXFL
+ProjectToDo63=Name=Add port IO8|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=DBCXNFAV
+ProjectToDo64=Name=Add port IO7|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=CRNSWQFG
+ProjectToDo65=Name=Add port IO6|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=DNSLQMYK
+ProjectToDo66=Name=Add port IO5|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=KPHCXJJN
+ProjectToDo67=Name=Add port IO4|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=YLIGSOJE
+ProjectToDo68=Name=Add port IO3|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=SYPCXAUI
+ProjectToDo69=Name=Add port IO2|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=LDCHJAMB
+ProjectToDo70=Name=Add port IO16|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=SKAMUWHY
+ProjectToDo71=Name=Add port IO15|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=CDMUDPON
+ProjectToDo72=Name=Add port IO14|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=ILDBOUDJ
+ProjectToDo73=Name=Add port IO13|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=MMGTUYXC
+ProjectToDo74=Name=Add port IO12|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=JSVFQHDD
+ProjectToDo75=Name=Add port IO11|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=SVCTAJVG
+ProjectToDo76=Name=Add port IO10|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=VXCVQRNA
+ProjectToDo77=Name=Add port IO1|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=WQURNANW
+ProjectToDo78=Name=Add port IO_9|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=MHVXLLXN
+ProjectToDo79=Name=Add port IO_8|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=KKHFSLBG
+ProjectToDo80=Name=Add port IO_7|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=ENXEVJIX
+ProjectToDo81=Name=Add port IO_6|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=QQESDKEJ
+ProjectToDo82=Name=Add port IO_5|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=FHETVOWP
+ProjectToDo83=Name=Add port IO_16|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=DMCXTGMY
+ProjectToDo84=Name=Add port IO_15|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Owner=Jeb|Category=FPGA-PCB Synchronize|UID=AYFAIXYA
+ProjectToDo85=Name=Add port CAM_CLKA|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=HVHNTXAN
+ProjectToDo86=Name=Add port CAM_D0|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=BHVPYMUB
+ProjectToDo87=Name=Add port CAM_D1|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=JWLAQUIA
+ProjectToDo88=Name=Add port CAM_D10|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=XMHNIGSK
+ProjectToDo89=Name=Add port CAM_D11|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=OBINNFXM
+ProjectToDo90=Name=Add port CAM_D2|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=UCAPINID
+ProjectToDo91=Name=Add port CAM_D3|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=IWWQOYBX
+ProjectToDo92=Name=Add port CAM_D4|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=OIUFXDYO
+ProjectToDo93=Name=Add port CAM_D5|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=DROGAPEC
+ProjectToDo94=Name=Add port CAM_D6|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=SJBAMQWF
+ProjectToDo95=Name=Add port CAM_D7|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=RFFJOPEC
+ProjectToDo96=Name=Add port CAM_D8|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=WTINDOAG
+ProjectToDo97=Name=Add port CAM_D9|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=NHBUEJCD
+ProjectToDo98=Name=Add port CAM_FLD|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=DORBGQYK
+ProjectToDo99=Name=Add port CAM_FLD_OUT|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=JQOXBPCH
+ProjectToDo100=Name=Add port CAM_HS|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=KIJCVTBL
+ProjectToDo101=Name=Add port CAM_PCLK|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=QJOEIJOY
+ProjectToDo102=Name=Add port CAM_VS|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=EPWIBNBY
+ProjectToDo103=Name=Add port CMOS_OE|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=UWXYMKTX
+ProjectToDo104=Name=Add port DATA_CLK_OUTA|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=OWUAOCHC
+ProjectToDo105=Name=Add port DATA_CLK_OUTB|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=VJSETFAO
+ProjectToDo106=Name=Add port DATA_READY|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=AVVUYNOD
+ProjectToDo107=Name=Add port DTP|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=SQAXPGNY
+ProjectToDo108=Name=Add port EOS_A|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=PSROKCAG
+ProjectToDo109=Name=Add port EOS_B|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=UQVJAFJK
+ProjectToDo110=Name=Add port EOSA|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=PEATSCCG
+ProjectToDo111=Name=Add port EOSB|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=GMGDDBKB
+ProjectToDo112=Name=Add port FRAME_CLK_OUTA|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=TRJLENLD
+ProjectToDo113=Name=Add port FRAME_CLK_OUTB|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=PPBGQJDQ
+ProjectToDo114=Name=Add port GND|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=VTEUQVBU
+ProjectToDo115=Name=Add port GND|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=AAXRCKTG
+ProjectToDo116=Name=Add port GND|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=CANSGKWV
+ProjectToDo117=Name=Add port GND|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=TMGCLKEW
+ProjectToDo118=Name=Add port GND|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=NKHUSOAG
+ProjectToDo119=Name=Add port GND|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=UTCMNQQH
+ProjectToDo120=Name=Change FRAME_CLK_OUT_A to Differential IO Standard|Document=Z:\Dropbox\M2FS-Dropbox\circuit boards\M2FS FLS Data Formatter\FPGA Project\M2FS_FLS_Data_Formatter_FPGA_8_14_2012.SchDoc|Category=FPGA-PCB Synchronize|UID=WXEAJEBJ
+
 [Comparison Options]
 ComparisonOptions0=Kind=Net|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0
 ComparisonOptions1=Kind=Net Class|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0
@@ -920,6 +1102,6 @@ ComparisonOptions3=Kind=Rule|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|Us
 ComparisonOptions4=Kind=Differential Pair|MinPercent=50|MinMatch=1|ShowMatch=0|Confirm=0|UseName=0|InclAllRules=0
 ComparisonOptions5=Kind=Structure Class|MinPercent=75|MinMatch=3|ShowMatch=-1|Confirm=-1|UseName=-1|InclAllRules=0
 
-[Generic_VHDLSynthesis]
-SchematicNetlister=0
+[SmartPDF]
+PageOptions=Record=PageOptions|CenterHorizontal=True|CenterVertical=True|PrintScale=1.00|XCorrection=1.00|YCorrection=1.00|PrintKind=1|BorderSize=5000000|LeftOffset=0|BottomOffset=0|Orientation=2|PaperLength=1000|PaperWidth=1000|Scale=100|PaperSource=7|PrintQuality=-4|MediaType=1|DitherType=10|PaperKind=Letter|PrintScaleMode=1
 
