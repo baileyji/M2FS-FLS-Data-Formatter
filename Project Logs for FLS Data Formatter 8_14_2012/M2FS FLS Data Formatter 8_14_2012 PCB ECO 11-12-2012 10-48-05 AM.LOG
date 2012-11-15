@@ -1,0 +1,15 @@
+Removed Pin From Net: NetName=DATA_CLK_OUT_A_N Pin=J1-A3
+Removed Pin From Net: NetName=SYS_CLK1_N Pin=J1-A5
+Removed Pin From Net: NetName=DATA_CLK_OUT_B_N Pin=J1-D3
+Removed Pin From Net: NetName=SYS_CLK2_N Pin=J1-D5
+Removed Pin From Net: NetName=CAM_CLKA Pin=U2-N2
+Removed Pin From Net: NetName=GND Pin=U2-U9
+Change Component DesignItemId : Designator=R27 Old DesignItemId=RES1 New DesignItemId=CMP-1013-00001-1
+Change Component Footprint: Designator=R27 Old Footprint=0805 New Footprint=RESC0805(2012)_L
+Change Component Comment : Designator=R27 Old Comment=10 New Comment=0R5 0805(2012)
+Added Pin To Net: NetName=SYS_CLK1_N Pin=J1-A3
+Added Pin To Net: NetName=DATA_CLK_OUT_A_N Pin=J1-A5
+Added Pin To Net: NetName=SYS_CLK2_N Pin=J1-D3
+Added Pin To Net: NetName=DATA_CLK_OUT_B_N Pin=J1-D5
+Added Pin To Net: NetName=GND Pin=U2-N2
+Added Pin To Net: NetName=CAM_CLKA Pin=U2-U9
