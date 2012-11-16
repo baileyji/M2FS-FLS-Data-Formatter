@@ -1,0 +1,12 @@
+Removed Pin From Net: NetName=GND Pin=U2-A2
+Removed Pin From Net: NetName=IO1 Pin=U2-N1
+Removed Pin From Net: NetName=IO16 Pin=U2-P6
+Removed Pin From Net: NetName=IO7 Pin=U2-U3
+Removed Pin From Net: NetName=IO13 Pin=U2-V4
+Removed Pin From Net: NetName=IO2 Pin=U2-V9
+Change Component Footprint: Designator=R27 Old Footprint=RESC0805(2012)_L New Footprint=RESC0805(2012)_N
+Added Pin To Net: NetName=IO1 Pin=U2-A2
+Added Pin To Net: NetName=IO13 Pin=U2-A3
+Added Pin To Net: NetName=IO2 Pin=U2-B3
+Added Pin To Net: NetName=IO16 Pin=U2-B5
+Added Pin To Net: NetName=IO7 Pin=U2-C5
